@@ -1,0 +1,326 @@
+@charset "UTF-8";
+
+*,*:before,*:after {
+  @include box-sizing(border-box);
+}
+body,button,input,select,textarea {
+  font-family: $font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $base-font-size;
+  color: $black;
+  background-color: $base-background-color;
+  padding: 0;
+  margin: 0;
+  line-height: $base-line-height;
+}
+
+h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,dd{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.wrap{
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+
+a{
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover{
+    color:$link-hover-color;
+  }
+
+  &.blue{
+    color: $blue;
+  }
+  &.grayA{
+    color: $grayA;
+  }
+  &.gray6{
+    color: $gray6;
+  }
+  &.gray9{
+    color: $gray9;
+  }
+  &.red{
+    color: $red;
+  }
+  &.black{
+    color: $black;
+  }
+  &.white{
+    color: $white;
+  }
+  &.green{
+    color: $green;
+  }
+  &.yellow{
+    color: $yellow;
+  }
+
+}
+.blue{
+  color: $blue;
+}
+.grayA{
+  color: $grayA;
+}
+.gray6{
+  color: $gray6;
+}
+.gray9{
+  color: $gray9;
+}
+
+.red{
+  color: $red;
+}
+.black{
+  color: $black;
+}
+.white{
+  color: $white;
+}
+.green{
+  color: $green;
+}
+.yellow{
+  color: $yellow;
+}
+
+.clearfix{
+  @include clearfix();
+}
+
+.hide{
+  display: none;
+}
+
+@for $i from 1 through 12{
+  $step:5;
+  $px: $i * $step;
+  .pad#{$px}{
+    padding: #{$px}px;
+  }
+}
+
+@for $i from 1 through 12{
+  $step:5;
+  $px: $i * $step;
+  .pb#{$px}{
+    padding-bottom: #{$px}px;
+  }
+}
+@for $i from 1 through 12{
+  $step:5;
+  $px: $i * $step;
+  .pt#{$px}{
+    padding-top: #{$px}px;
+  }
+}
+@for $i from 1 through 12{
+  $step:5;
+  $px: $i * $step;
+  .pl#{$px}{
+    padding-left: #{$px}px;
+  }
+}
+@for $i from 1 through 12{
+  $step:5;
+  $px: $i * $step;
+  .pr#{$px}{
+    padding-right: #{$px}px;
+  }
+}
+
+@for $i from 1 through 12{
+  $step:5;
+  $px: $i * $step;
+  .mt#{$px}{
+    margin-top: #{$px}px;
+  }
+}
+@for $i from 1 through 12{
+  $step:5;
+  $px: $i * $step;
+  .m_t#{$px}{
+    margin-top: #{$px}px;
+  }
+}
+
+@for $i from 1 through 12{
+  $step:5;
+  $px: $i * $step;
+  .mb#{$px}{
+    margin-bottom: #{$px}px;
+  }
+}
+
+@for $i from 1 through 12{
+  $step:5;
+  $px: $i * $step;
+  .ml#{$px}{
+    margin-left: #{$px}px;
+  }
+}
+
+@for $i from 1 through 12{
+  $step:5;
+  $px: $i * $step;
+  .mr#{$px}{
+    margin-right: #{$px}px;
+  }
+}
+
+@for $i from 0 through 20{
+  $step:2;
+  $px: $i * $step + 10;
+  @if $i==0{
+    .f0{
+      font-size: 0;
+    }
+  }
+  @if $i==2{
+    .f#{$px - 1}{
+      font-size: #{$px - 1}px;
+    }
+  }
+  .f#{$px}{
+    font-size: #{$px}px;
+  }
+}
+
+.SimSun{
+  font-family: SimSun, "宋体";
+}
+
+.font-normal{
+  font-weight: normal;
+}
+.font-bold{
+  font-weight: bold;
+}
+
+.lh24{
+  line-height: 24px;
+}
+.lh30{
+  line-height: 30px;
+}
+.lh40{
+  line-height: 40px;
+}
+
+.align-left{
+  text-align: left;
+}
+.align-center{
+  text-align: center;
+}
+.align-right{
+  text-align: right;
+}
+
+.block-center{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.float-left{
+  float: left;
+}
+.float-right{
+  float: right;
+}
+
+.inline-form, .form{
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+
+  .row{
+    display: table-row;
+  }
+
+  .cell, .addon{
+    display: table-cell;
+    vertical-align: middle;
+
+    &.vat{
+      vertical-align: top;
+    }
+  }
+  .addon{
+    white-space: nowrap;
+    width: 1%;
+  }
+}
+
+.abs-center{
+  @include abs-center();
+}
+.bgc-white{
+  background-color: $white;
+}
+
+.ellipsis{
+  @include text-overflow();
+}
+
+.ovh{
+  overflow: hidden;
+}
+.ova{
+  overflow: auto;
+}
+
+.db{
+  display: block;
+}
+
+.posr{
+  position: relative;
+}
+.hand{
+  cursor: pointer;
+}
+
+.pos-right-top{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.pos-left-top{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.pos-right-bottom{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.pos-left-bottom{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+[data-href] {
+  cursor: pointer;
+}
+
+
+
+
+

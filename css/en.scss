@@ -1,0 +1,241 @@
+@charset "UTF-8";
+
+@import "scss/var";
+@import "scss/mixins";
+
+.index-banner{
+  .big-logo{
+    background: url("../images/big-logo-en.png") no-repeat;
+
+    .link{
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      font-size: 14px;
+      text-align: center;
+      color: #4e616a;
+
+      a{
+        color: #fff;
+        margin: 0 35px;
+      }
+    }
+  }
+}
+
+.index-r3{
+  .foot{
+    a{
+      display: inline-block;
+      width: 320px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 14px;
+      color: #fff;
+      background: #04182b;
+
+    }
+  }
+}
+
+.tech-banner{
+
+
+  .big-logo{
+    position: absolute;
+    left: 50%;
+    top: 255px;
+    margin-left: -291px;
+    width: 593px;
+    height: 521px;
+    background: url("../images/tech-logo-en.png") no-repeat 50% 50%;
+  }
+}
+
+.community-banner{
+  .big-logo{
+    position: absolute;
+    left: 50%;
+    top: 235px;
+    margin-left: -289px;
+    width: 578px;
+    height: 614px;
+    background: url("../images/community-logo-en.png") no-repeat 50% 50%;
+
+  }
+}
+
+
+@media screen and (min-width: 800px) and (max-width: 959px) {
+  .tech-banner{
+    height: 750px;
+
+    .big-logo{
+      top: 155px;
+    }
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .index-banner{
+    height: 550px;
+
+    .big-logo{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -290px;
+      margin-top: -119px;
+      width: 580px;
+      height: 239px;
+      background: url("../images/big-logo-en.png") no-repeat;
+      -webkit-background-size: 100%;
+      background-size: 100%;
+
+      .link{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        font-size: 14px;
+        text-align: center;
+        color: #4e616a;
+
+        a{
+          color: #fff;
+          margin: 0 35px;
+        }
+      }
+    }
+  }
+  .tech-banner{
+    .big-logo{
+      position: static;
+      margin-left: auto;
+      margin-right: auto;
+      width: 500px;
+      height: 439px;
+      background: url("../images/tech-logo-en.png") no-repeat 50% 50%;
+      background-size: 100%;
+    }
+  }
+  .community-banner{
+    height: 650px;
+    overflow: hidden;
+
+    .big-logo{
+      position: static;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 70px;
+      width: 540px;
+      height: 574px;
+      background: url("../images/community-logo-en.png") no-repeat 50% 50%;
+      background-size: 100%;
+      -webkit-background-size: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .index-banner{
+    height: 350px;
+
+    .big-logo{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -180px;
+      margin-top: -64px;
+      width: 360px;
+      height: 148px;
+      background: url("../images/big-logo-en.png") no-repeat;
+      -webkit-background-size: 100%;
+      background-size: 100%;
+
+      .link{
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 100%;
+        font-size: 14px;
+        white-space: nowrap;
+        text-align: center;
+        color: #4e616a;
+        @include translate(-50%, 0);
+
+        a{
+          color: #fff;
+          margin: 0 15px;
+        }
+      }
+    }
+  }
+
+  .tech-banner{
+    .big-logo{
+      position: static;
+      margin-left: auto;
+      margin-right: auto;
+      width: 360px;
+      height: 316px;
+      background: url("../images/tech-logo-en.png") no-repeat 50% 50%;
+      background-size: 100%;
+    }
+  }
+  .community-banner{
+    height: 540px;
+    overflow: hidden;
+
+    .big-logo{
+      position: static;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 100px;
+      width: 360px;
+      height: 383px;
+      background: url("../images/community-logo-en.png") no-repeat 50% 50%;
+      background-size: 100%;
+      -webkit-background-size: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 360px){
+  .index-r3{
+    .foot{
+      a{
+        width: 300px;
+      }
+    }
+  }
+
+  .tech-banner{
+    .big-logo{
+      position: static;
+      margin-left: auto;
+      margin-right: auto;
+      width: 300px;
+      height: 263px;
+      background: url("../images/tech-logo-en.png") no-repeat 50% 50%;
+      background-size: 100%;
+    }
+  }
+  .community-banner{
+    height: 540px;
+    overflow: hidden;
+
+    .big-logo{
+      position: static;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 100px;
+      width: 300px;
+      height: 319px;
+      background: url("../images/community-logo-en.png") no-repeat 50% 50%;
+      background-size: 100%;
+      -webkit-background-size: 100%;
+    }
+  }
+}

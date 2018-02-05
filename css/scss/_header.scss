@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+.header{
+  $h:70px;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: $h;
+  background: #090322;
+  z-index: 9;
+
+  .wrap{
+    position: relative;
+    height: $h;
+    line-height: $h;
+  }
+  .logo{
+    position: absolute;
+    left: 15px;
+    top: 0;
+    width: 104px;
+    height: 70px;
+    background: url("../images/logo.png") no-repeat 0 50%;
+  }
+  .menu{
+    font-size: 0;
+    float: right;
+
+    a{
+      font-size: 14px;
+      color: #b9b8bc;
+      margin: 0 30px;
+
+      &:hover, &.active{
+        color: #fff;
+      }
+
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .header{
+    .menu{
+      a{
+        margin: 0 10px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 759px) {
+  .header{
+    .menu{
+      a{
+        margin: 0 5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header{
+    .menu{
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding-top: 70px;
+      background: #090322;
+      padding-left: 5px;
+      padding-right: 5px;
+      height: 70px;
+      overflow: hidden;
+
+      &.active{
+        height: auto;
+      }
+
+      &:before, &:after{
+        content: '';
+        width: 20px;
+        position: absolute;
+        left: 50%;
+        margin-left: -10px;
+        border-top: 2px solid $white;
+      }
+      &:before{
+        height: 10px;
+        border-bottom: 2px solid $white;
+        top: 30px;
+      }
+      &:after{
+        content: '';
+        top: 34px;
+      }
+
+      a{
+        display: block;
+        text-align: center;
+        line-height: 30px;
+      }
+    }
+  }
+}
