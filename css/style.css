@@ -1796,6 +1796,69 @@ a.yellow {
   color: #fff;
 }
 
+.blog-top {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: #1f1b34;
+  background-image: -webkit-linear-gradient(top, #090222 0%, #00252C 100%);
+  background-image: -o-linear-gradient(top, #090222 0%, #00252C 100%);
+  background-image: linear-gradient(to bottom, #090222 0%, #00252C 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF090222', endColorstr='#FF00252C', GradientType=0);
+}
+.blog-top .big-logo {
+  width: 792px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.blog-top .big-logo img {
+  width: 100%;
+  max-height: 265px;
+}
+
+.blog-list {
+  padding: 50px 0;
+  width: 100%;
+  overflow: hidden;
+}
+.blog-list li {
+  padding: 50px 0;
+  border-bottom: 1px solid #eee;
+}
+.blog-list .title {
+  font-size: 26px;
+  color: #000;
+  margin-bottom: 5px;
+}
+.blog-list .title a {
+  font-size: 26px;
+  color: #000;
+}
+.blog-list .sub {
+  margin-bottom: 20px;
+}
+.blog-list .sub .blue {
+  margin-right: 10px;
+}
+.blog-list .sub .date {
+  color: #8d8d8d;
+}
+.blog-list .content {
+  font-size: 14px;
+  line-height: 22px;
+  color: #969696;
+}
+
 @media screen and (min-width: 600px) and (max-width: 759px) {
   .index-r2 .wrap {
     height: 300px;
@@ -2735,6 +2798,37 @@ a.yellow {
   .res-media .list .button a:hover {
     background: #000;
     color: #fff;
+  }
+
+  .blog-top {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: #1f1b34;
+    background-image: -webkit-linear-gradient(top, #090222 0%, #00252C 100%);
+    background-image: -o-linear-gradient(top, #090222 0%, #00252C 100%);
+    background-image: linear-gradient(to bottom, #090222 0%, #00252C 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF090222', endColorstr='#FF00252C', GradientType=0);
+  }
+  .blog-top .big-logo {
+    width: 90%;
+    max-width: 792px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .blog-top .big-logo img {
+    width: 100%;
+    max-height: 265px;
   }
 }
 @media screen and (max-width: 599px) {
