@@ -1506,7 +1506,8 @@ a.yellow {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF090222', endColorstr='#FF00252C', GradientType=0);
 }
 .team-banner .big-logo {
-  width: 59%;
+  width: 95%;
+  max-width: 896px;
   height: auto;
   overflow: hidden;
   position: absolute;

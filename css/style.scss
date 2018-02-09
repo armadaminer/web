@@ -583,7 +583,8 @@
 
 
   .big-logo{
-    width: 59%;
+    width: 95%;
+    max-width: 896px;
     height: auto;
     overflow: hidden;
     @include abs-center();
